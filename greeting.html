@@ -13,10 +13,18 @@
 
             <script type="text/babel">
             class Greeting extends React.Component {
+                constructor(props) {
+                    super(props)
+                    this.state = {
+                        hi: "I hope you are doing well!"
+                    }
+                }
+
                 render() {
                     return(
                         <div>
                         <h1>Hello {this.props.name}!</h1>
+                        <p>{this.state.hi}</p>
                         </div>
                     );
                 }
